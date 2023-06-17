@@ -92,7 +92,7 @@ def classify_image(inp):
     inp = inp.reshape((-1, 256, 256, 3))
     inp = preprocess_input(inp)
     prediction = model.predict(inp).flatten()
-    return {labels[i]: float(prediction[i]) for i in range(5)}
+    return {labels[i]: float(prediction[i]) for i in range(num_classes)}
 
 image = gr.Image(shape=(256, 256), label="栗喉蜂虎、藍孔雀、戴勝、鱟及歐亞水獺照片")
 label = gr.Label(num_top_classes=num_classes, label="AI ResNet50V2遷移式學習辨識結果")
