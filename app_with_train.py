@@ -112,7 +112,7 @@ for i in range(num_classes):
 iface = gr.Interface(fn=classify_image,
              inputs=image,
              outputs=label,
-             title="AI 喉蜂虎、藍孔雀、戴勝、鱟及歐亞水獺辨識機",
+             title="AI 栗喉蜂虎、藍孔雀、戴勝、鱟及歐亞水獺辨識機",
              description=some_text,
              examples=sample_images, live=True)
 
